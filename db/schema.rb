@@ -10,7 +10,10 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2018_12_01_165708) do
+ActiveRecord::Schema.define(version: 2018_11_22_213231) do
+
+  # These are extensions that must be enabled in order to support this database
+  enable_extension "plpgsql"
 
   create_table "auditoria", force: :cascade do |t|
     t.string "name"
@@ -26,8 +29,8 @@ ActiveRecord::Schema.define(version: 2018_12_01_165708) do
   end
 
   create_table "movie_categories", force: :cascade do |t|
-    t.integer "movie_id"
-    t.integer "category_id"
+    t.bigint "movie_id"
+    t.bigint "category_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.index ["category_id"], name: "index_movie_categories_on_category_id"
@@ -43,10 +46,10 @@ ActiveRecord::Schema.define(version: 2018_12_01_165708) do
   end
 
   create_table "screenings", force: :cascade do |t|
-    t.integer "movie_id"
+    t.bigint "movie_id"
     t.datetime "date"
     t.integer "price"
-    t.integer "auditorium_id"
+    t.bigint "auditorium_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.index ["auditorium_id"], name: "index_screenings_on_auditorium_id"
@@ -54,11 +57,11 @@ ActiveRecord::Schema.define(version: 2018_12_01_165708) do
   end
 
   create_table "tickets", force: :cascade do |t|
-    t.integer "user_id"
-    t.integer "screening_id"
+    t.bigint "user_id"
+    t.bigint "screening_id"
+    t.integer "quantity"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
-    t.integer "quantity"
     t.index ["screening_id"], name: "index_tickets_on_screening_id"
     t.index ["user_id"], name: "index_tickets_on_user_id"
   end
@@ -74,4 +77,10 @@ ActiveRecord::Schema.define(version: 2018_12_01_165708) do
     t.index ["remember_token"], name: "index_users_on_remember_token"
   end
 
+  add_foreign_key "movie_categories", "categories"
+  add_foreign_key "movie_categories", "movies"
+  add_foreign_key "screenings", "auditoria"
+  add_foreign_key "screenings", "movies"
+  add_foreign_key "tickets", "screenings"
+  add_foreign_key "tickets", "users"
 end
