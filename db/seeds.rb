@@ -34,7 +34,7 @@ s2 = Screening.create(price: 2000, movie: m1, auditorium: a1, date: DateTime.new
 s3 = Screening.create(price: 1000, movie: m2, auditorium: a2, date: DateTime.new(2018, 2, 3, 15, 0, 0))
 s4 = Screening.create(price: 1500, movie: m3, auditorium: a3, date: DateTime.new(2018, 2, 3, 15, 0, 0))
 
-u1 = User.create!(email: 'asd@asd.com', password: 'asd')
+u1 = User.create!(email: 'a@a.com', password: 'a')
 u2 = User.create!(email: 'lol@lol.com', password: 'lol')
 u3 = User.create!(email: '1@1.com', password: '1')
 
