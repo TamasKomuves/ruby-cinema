@@ -1,0 +1,13 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  movie: one
+  date: 2018-11-22 22:29:06
+  price: 1
+  auditorium: one
+
+two:
+  movie: two
+  date: 2018-11-22 22:29:06
+  price: 1
+  auditorium: two

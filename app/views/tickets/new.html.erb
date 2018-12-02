@@ -1,0 +1,7 @@
+<%= @screening.movie.title %>
+<%= form_for @ticket do |f| %>
+  Quantity: <%= text_field_tag 'quantity' %><br />
+  <%= hidden_field_tag 'screening', @screening.id %>
+  <%= hidden_field_tag 'user', current_user.id %>
+  <%= f.submit "Create" %>
+<% end %>

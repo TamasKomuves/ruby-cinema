@@ -1,0 +1,37 @@
+<div class="title">
+  <h1>Vetítések</h1>
+</div>
+<% @screenings.each do |screening| %>
+  <div class="screening-container border rounded border-dark">
+    <div class="row">
+      <div class="col-md">
+        <strong>Film cím:</strong> <%= screening.movie.title %>
+      </div>
+      <div class="col-md">
+        <strong>Jegyár:</strong> <%= screening.price %> ft
+      </div>
+      <div class="col-md">
+        <strong>Hossz:</strong> <%= screening.movie.length %> perc
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-md">
+        <strong>Vetítés dátuma:</strong> <%= screening.date %>
+      </div>
+      <div class="col-md">
+        <strong>Kategória:</strong>
+        <% screening.movie.categories.each do |category| %>
+          <%= category.name %>
+        <% end %>
+      </div>
+      <div class="col-md">
+        <strong>Leírás:</strong> <%= screening.movie.description %> <br>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-md">
+        <%= button_to "Foglalás", ticket_path(screening), :method => :get, :form_class => "btn btn-secondary btn-sm foglalas" %>
+      </div>
+    </div>
+  </div>
+<% end %>

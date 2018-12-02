@@ -1,0 +1,28 @@
+<div class="title">
+  <h1>Jegyeim</h1>
+</div>
+<% @tickets.each do |ticket| %>
+  <div class="screening-container border rounded border-dark">
+    <div class="row">
+      <div class="col-md">
+        <strong>Film címe:</strong> <%= ticket.screening.movie.title %>
+      </div>
+      <div class="col-md">
+        <strong>Terem:</strong> <%= ticket.screening.auditorium.name %>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-md">
+        <strong>Megvett jegyek száma:</strong> <%= ticket.quantity %> db
+      </div>
+      <div class="col-md">
+        <strong>Végösszeg:</strong> <%= ticket.quantity * ticket.screening.price %> ft
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-md">
+        <strong>Vetítés dátuma:</strong> <%= ticket.screening.date %>
+      </div>
+    </div>
+  </div>
+<% end %>
