@@ -13,7 +13,7 @@ c4 = Category.create(name: 'Dráma')
 c5 = Category.create(name: 'Thriller')
 
 m1 = Movie.create(title: 'The Lord Of The Rings', description: 'Orok klassikus, soha veget nem eros stilus', length: 95)
-m2 = Movie.create(title: 'Ali G', description: 'Legvicesebb film a vilagon, a kacaj elmaradhatatlan lesz te$stnedvem', length: 124)
+m2 = Movie.create(title: 'Ali G', description: 'Legvicesebb film a vilagon, a kacaj elmaradhatatlan lesz', length: 124)
 m3 = Movie.create(title: 'Harry Potter', description: 'Varazslatos vilagba kalauzol minket el ez a film', length: 160)
 
 MovieCategory.create(movie: m1, category: c1)

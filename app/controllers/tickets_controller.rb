@@ -1,4 +1,5 @@
 class TicketsController < ApplicationController
+  before_action :require_login
 
   def index
     @tickets = Ticket.where(user: current_user)
