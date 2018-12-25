@@ -1,6 +1,9 @@
 <div class="title">
   <h1>Vetítések</h1>
 </div>
+
+<%= button_to "Új vetítés létrehozása", new_screening_path, :method => :get, :form_class => "btn btn-light btn-sm" %>
+
 <% @screenings.each do |screening| %>
   <div class="screening-container border rounded border-dark">
     <div class="row">
@@ -35,7 +38,8 @@
     </div>
     <div class="row">
       <div class="col-md">
-        <%= button_to "Foglalás", ticket_path(screening), :method => :get, :form_class => "btn btn-secondary btn-sm foglalas" %>
+        <%= button_to "Módosítás", edit_screening_path(screening), :method => :get, :form_class => "btn btn-light btn-sm admin-screenings-button" %>
+        <%= button_to "Törlés", screening_path(screening), :method => :delete, data: {confirm: "Biztosan törli?"}, :form_class => "btn btn-light btn-sm admin-screenings-button" %>
       </div>
     </div>
   </div>

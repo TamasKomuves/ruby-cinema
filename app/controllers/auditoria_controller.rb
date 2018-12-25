@@ -1,0 +1,2 @@
+class AuditoriaController < ApplicationController
+end

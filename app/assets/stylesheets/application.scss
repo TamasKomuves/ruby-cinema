@@ -10,9 +10,10 @@
  * files in this directory. Styles in this file should be added after the last require_* statement.
  * It is generally better to create a new file per style scope.
  *
- *= require_tree .
- *= require_self
+
  */
+@import "bootstrap";
+
 .screening-container {
     background-color: lightgrey;
     padding: 15px;
@@ -39,4 +40,18 @@ body {
 .other-links {
     margin-top: 3%;
     font-size: x-large;
+}
+
+.sign-in-alert {
+    margin-top: 2%;
+    margin-right: 60%;
+}
+
+.admin-screenings-button {
+  margin-top: 1%;
+  margin-left: 1%;
+}
+
+.screening-form {
+  margin-top: 2%;
 }

@@ -1,10 +1,14 @@
 Rails.application.routes.draw do
+  get 'screenings/admin_index'
   get 'screenings/index'
+  get 'screenings/edit'
   get 'tickets/:id', to: 'tickets#new', as:'ticket'
-  # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
+  get 'movies/admin_index'
   root to: 'welcome#show'
 
   resources :tickets, only: [:create, :index]
+  resources :screenings
+  resources :movies
 
   get 'welcome/show'
 end

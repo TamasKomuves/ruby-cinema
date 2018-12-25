@@ -35,8 +35,13 @@ s3 = Screening.create(price: 1000, movie: m2, auditorium: a2, date: DateTime.new
 s4 = Screening.create(price: 1500, movie: m3, auditorium: a3, date: DateTime.new(2018, 2, 3, 15, 0, 0))
 
 u1 = User.create!(email: 'a@a.com', password: 'a')
+r1 = Role.create!(user: u1, role:'USER')
 u2 = User.create!(email: 'lol@lol.com', password: 'lol')
+r2 = Role.create!(user: u2, role:'USER')
 u3 = User.create!(email: '1@1.com', password: '1')
+r3 = Role.create!(user: u3, role:'USER')
+u4 = User.create!(email: 'admin@admin.com', password: 'admin')
+r4 = Role.create!(user: u4, role:'ADMIN')
 
 t1 = Ticket.create(user: u1, screening: s1, quantity: 3)
 t2 = Ticket.create(user: u1, screening: s2, quantity: 1)

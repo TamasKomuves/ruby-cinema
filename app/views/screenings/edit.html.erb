@@ -1,0 +1,44 @@
+<h3>Vetítés szerkesztése</h3>
+<div>
+  <%= form_for @screening do |f| %>
+    <form>
+      <div class="row">
+        <div class="col col-sm-1">
+          <strong>Dátum:</strong>
+        </div>
+        <div class="col">
+          <%= f.datetime_select :date %>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col col-sm-1">
+          <strong>Film:</strong>
+        </div>
+        <div class="col">
+          <%= f.collection_select :movie_id, @movies, :id, :title %>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col col-sm-1">
+          <strong>Terem:</strong>
+        </div>
+        <div class="col">
+          <%= f.collection_select :auditorium_id, @auditoria, :id, :name %>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col col-sm-1">
+          <strong>Jegyár:</strong>
+        </div>
+        <div class="col">
+          <%= f.number_field :price, :required => 'required' %>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col col-sm-1">
+          <%= f.submit "Módosít" %>
+        </div>
+      </div>
+    </form>
+  <% end %>
+</div>
