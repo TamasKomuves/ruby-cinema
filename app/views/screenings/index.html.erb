@@ -30,7 +30,10 @@
     </div>
     <div class="row">
       <div class="col-md">
-        <strong><%= t(".auditorium") %>:</strong> <%= screening.auditorium.name %>
+        <strong><%= t(".auditorium") %>:</strong>
+        <% if screening.auditorium != nil %>
+          <%= screening.auditorium.name %>
+        <% end %>
       </div>
     </div>
     <div class="row">

@@ -1,4 +1,7 @@
 class CategoriesController < ApplicationController
+
+  before_action :require_login
+
   def admin_index
     @categories = Category.all
   end

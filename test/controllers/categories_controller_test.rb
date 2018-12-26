@@ -1,19 +1,19 @@
 require 'test_helper'
 
 class CategoriesControllerTest < ActionDispatch::IntegrationTest
-  test "should get admin_index" do
+
+  test "should not get admin_index without login" do
     get categories_admin_index_url
-    assert_response :success
+    assert_response :found
   end
 
-  test "should get edit" do
-    get categories_edit_url
-    assert_response :success
+  test "should not get edit without login" do
+    get edit_category_path(id: 1)
+    assert_response :found
   end
 
-  test "should get new" do
-    get categories_new_url
-    assert_response :success
+  test "should not get new without login" do
+    get new_category_path(id: 1)
+    assert_response :found
   end
-
 end

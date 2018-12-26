@@ -12,7 +12,7 @@ class AuditoriumTest < ActiveSupport::TestCase
     assert_not auditorium.save
   end
 
-  test "should save Auditorium without all parameter given" do
+  test "should save Auditorium with all parameter given" do
     auditorium = Auditorium.new(name: "name1", capacity: 5)
     assert auditorium.save
   end

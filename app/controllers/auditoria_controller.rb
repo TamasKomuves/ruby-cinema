@@ -1,5 +1,7 @@
 class AuditoriaController < ApplicationController
 
+  before_action :require_login
+
   def admin_index
     @auditoria = Auditorium.all
   end

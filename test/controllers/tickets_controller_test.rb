@@ -1,7 +1,9 @@
 require 'test_helper'
 
 class TicketsControllerTest < ActionDispatch::IntegrationTest
-  # test "the truth" do
-  #   assert true
-  # end
+
+  test "should not get index without login" do
+    get tickets_url
+    assert_response :found
+  end
 end

@@ -1,5 +1,7 @@
 class MoviesController < ApplicationController
 
+  before_action :require_login
+
   def admin_index
     @movies = Movie.all
   end

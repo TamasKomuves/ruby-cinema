@@ -19,4 +19,11 @@ class TicketTest < ActiveSupport::TestCase
     ticket1 = Ticket.new(user: user1, screening: screening1)
     assert_not ticket1.save
   end
+
+  test "should save Ticket with all parameters given" do
+    user1 = User.new(email: 'example@asd.com', password: '12345')
+    screening1 = Screening.new
+    ticket1 = Ticket.new(user: user1, screening: screening1, quantity: 5)
+    assert ticket1.save
+  end
 end
