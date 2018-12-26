@@ -1,0 +1,24 @@
+<div class="title">
+  <h1><%= t(".title") %></h1>
+</div>
+
+<%= button_to t(".create_new_auditorium"), new_auditorium_path, :method => :get, :form_class => "btn btn-light btn-sm" %>
+
+<% @auditoria.each do |auditorium| %>
+  <div class="screening-container border rounded border-dark">
+    <div class="row">
+      <div class="col-md">
+        <strong><%= t(".name") %>:</strong> <%= auditorium.name %>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-md">
+        <strong><%= t(".capacity") %>:</strong> <%= auditorium.capacity %> fő
+      </div>
+    </div>
+    <div class="col-md">
+      <%= button_to t(".modify"), edit_auditorium_path(auditorium), :method => :get, :form_class => "btn btn-light btn-sm admin-screenings-button" %>
+      <%= button_to t(".delete"), auditorium_path(auditorium), :method => :delete, data: {confirm: t(".are_you_sure_to_delete")}, :form_class => "btn btn-light btn-sm admin-screenings-button" %>
+    </div>
+  </div>
+<% end %>

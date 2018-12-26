@@ -1,7 +1,29 @@
-<%= @screening.movie.title %>
+<h3><%= t(".title") %></h3>
+
 <%= form_for @ticket do |f| %>
-  Quantity: <%= text_field_tag 'quantity' %><br />
-  <%= hidden_field_tag 'screening', @screening.id %>
-  <%= hidden_field_tag 'user', current_user.id %>
-  <%= f.submit "Létrehoz" %>
+  <form>
+    <div class="row">
+      <div class="col col-sm-1">
+        <strong><%= t(".movie_title") %>:</strong>
+      </div>
+      <div class="col">
+        <%= @screening.movie.title %>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col col-sm-1">
+        <strong><%= t(".quantity") %>:</strong>
+      </div>
+      <div class="col">
+        <%= f.number_field :quantity, :required => 'required' %>
+        <%= f.hidden_field :screening_id, :value => @screening.id %>
+        <%= f.hidden_field :user_id, :value => current_user.id %>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col col-sm-1">
+        <%= f.submit t(".create") %>
+      </div>
+    </div>
+  </form>
 <% end %>

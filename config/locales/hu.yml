@@ -1,0 +1,132 @@
+hu:
+  date:
+    order:
+    - :year
+    - :month
+    - :day
+    month_names:
+      [~, Január, Február, Március, Április, Május, Június, Július, Augusztus, Szeptember, Október, November, December]
+  email: "Email"
+  password: "Jelszó"
+  title: "Cinema"
+  home_nav: "Főoldal"
+  screenings_nav: "Vetítések"
+  my_tickets_nav: "Jegyeim"
+  sign_out_nav: "Kijelentkezés"
+  movies_nav: "Filmek"
+  auditoria_nav: "Termek"
+  categories_nav: "Kategóriák"
+  welcome:
+    show:
+      welcome: "Üdvözöljük"
+  screenings:
+    index:
+      title: "Vetítések"
+      movie_title: "Film cím"
+      ticket_price: "Jegyár"
+      length: "Hossz"
+      date: "Vetítés dátuma"
+      category: "Kategória"
+      description: "Leírás"
+      auditorium: "Terem"
+      booking: "Foglalás"
+    admin_index:
+      new_screening: "Új vetítés felvétele"
+      title: "Vetítések"
+      movie_title: "Film cím"
+      ticket_price: "Jegyár"
+      length: "Hossz"
+      date: "Vetítés dátuma"
+      category: "Kategória"
+      description: "Leírás"
+      auditorium: "Terem"
+      modify: "Módosítás"
+      delete: "Törlés"
+      are_you_sure_to_delete: "Biztosan törli?"
+    edit:
+      title: "Vetítés szerkesztése"
+      date: "Dátum"
+      movie: "Film"
+      auditorium: "Terem"
+      ticket_cost: "Jegyár"
+      modify: "Módosít"
+    new:
+      title: "Új vetítés felvétele"
+      date: "Dátum"
+      movie: "Film"
+      auditorium: "Terem"
+      ticket_cost: "Jegyár"
+      create: "Létrehoz"
+  movies:
+    admin_index:
+      title: "Filmek"
+      create_new_movie: "Új film felvétele"
+      movie_title: "Cím"
+      length: "Hossz"
+      category: "Kategória"
+      description: "Leírás"
+      modify: "Módosítás"
+      delete: "Törlés"
+      are_you_sure_to_delete: "Biztosan törli?"
+    edit:
+      title: "Film szerkesztése"
+      movie_title: "Cím"
+      length: "Hossz"
+      category: "Kategória"
+      description: "Leírás"
+      modify: "Módosítás"
+    new:
+      title: "Új film felvétele"
+      movie_title: "Cím"
+      length: "Hossz"
+      category: "Kategória"
+      description: "Leírás"
+      create: "Létrehoz"
+  auditoria:
+    admin_index:
+      title: "Termek"
+      create_new_auditorium: "Új terem felvétele"
+      name: "Név"
+      capacity: "Kapacitás"
+      modify: "Módosítás"
+      delete: "Törlés"
+      are_you_sure_to_delete: "Biztosan törli?"
+    edit:
+      title: "Terem szerkesztése"
+      name: "Név"
+      capacity: "Kapacitás"
+      modify: "Módosítás"
+    new:
+      title: "Új terem felvétele"
+      name: "Név"
+      capacity: "Kapacitás"
+      create: "Létrehoz"
+  categories:
+    admin_index:
+      title: "Kategóriák"
+      create_new_category: "Új kategória felvétele"
+      name: "Név"
+      modify: "Módosítás"
+      delete: "Törlés"
+      are_you_sure_to_delete: "Biztosan törli?"
+    edit:
+      title: "Kategória szerkesztése"
+      name: "Név"
+      modify: "Módosítás"
+    new:
+      title: "Új kategória felvétele"
+      name: "Név"
+      create: "Létrehoz"
+  tickets:
+    index:
+      title: "Jegyeim"
+      movie_title: "Film címe"
+      auditorium: "Terem"
+      ticket_quantity: "Megvett jegyek száma"
+      price_sum: "Végösszeg"
+      screening_date: "Vetítés dátuma"
+    new:
+      title: "Jegy foglalás"
+      movie_title: "Film címe"
+      quantity: "Darabszám"
+      create: "Létrehoz"

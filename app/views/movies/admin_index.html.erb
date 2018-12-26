@@ -1,34 +1,34 @@
 <div class="title">
-  <h1>Filmek</h1>
+  <h1><%= t(".title") %></h1>
 </div>
 
-<%= button_to "Új film felvétele", new_movie_path, :method => :get, :form_class => "btn btn-light btn-sm" %>
+<%= button_to t(".create_new_movie"), new_movie_path, :method => :get, :form_class => "btn btn-light btn-sm" %>
 
 <% @movies.each do |movie| %>
   <div class="screening-container border rounded border-dark">
     <div class="row">
       <div class="col-md">
-        <strong>Cím:</strong> <%= movie.title %>
+        <strong><%= t(".movie_title") %>:</strong> <%= movie.title %>
       </div>
       <div class="col-md">
-        <strong>Hossz:</strong> <%= movie.length %> perc
+        <strong><%= t(".length") %>:</strong> <%= movie.length %> perc
       </div>
     </div>
     <div class="row">
       <div class="col-md">
-        <strong>Kategória:</strong>
+        <strong><%= t(".category") %>:</strong>
         <% movie.categories.each do |category| %>
           <%= category.name %>
         <% end %>
       </div>
       <div class="col-md">
-        <strong>Leírás:</strong> <%= movie.description %> <br>
+        <strong><%= t(".description") %>:</strong> <%= movie.description %> <br>
       </div>
     </div>
     <div class="row">
       <div class="col-md">
-        <%= button_to "Módosítás", edit_movie_path(movie), :method => :get, :form_class => "btn btn-light btn-sm admin-screenings-button" %>
-        <%= button_to "Törlés", movie_path(movie), :method => :delete, data: {confirm: "Biztosan törli?"}, :form_class => "btn btn-light btn-sm admin-screenings-button" %>
+        <%= button_to t(".modify"), edit_movie_path(movie), :method => :get, :form_class => "btn btn-light btn-sm admin-screenings-button" %>
+        <%= button_to t(".delete"), movie_path(movie), :method => :delete, data: {confirm: t(".are_you_sure_to_delete")}, :form_class => "btn btn-light btn-sm admin-screenings-button" %>
       </div>
     </div>
   </div>

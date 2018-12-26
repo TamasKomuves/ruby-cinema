@@ -1,10 +1,10 @@
-<h3>Új vetítés létrehozása</h3>
+<h3><%= t(".title") %></h3>
 <div class="screening-form">
   <%= form_for @screening do |f| %>
     <form>
       <div class="row">
         <div class="col col-sm-1">
-          <strong>Dátum:</strong>
+          <strong><%= t(".date") %>:</strong>
         </div>
         <div class="col">
           <%= f.datetime_select :date %>
@@ -12,7 +12,7 @@
       </div>
       <div class="row">
         <div class="col col-sm-1">
-          <strong>Film:</strong>
+          <strong><%= t(".movie") %>:</strong>
         </div>
         <div class="col">
           <%= f.collection_select :movie_id, @movies, :id, :title %>
@@ -20,7 +20,7 @@
       </div>
       <div class="row">
         <div class="col col-sm-1">
-          <strong>Terem:</strong>
+          <strong><%= t(".auditorium") %>:</strong>
         </div>
         <div class="col">
           <%= f.collection_select :auditorium_id, @auditoria, :id, :name %>
@@ -28,7 +28,7 @@
       </div>
       <div class="row">
         <div class="col col-sm-1">
-          <strong>Jegyár:</strong>
+          <strong><%= t(".ticket_cost") %>:</strong>
         </div>
         <div class="col">
           <%= f.number_field :price, :required => 'required' %>
@@ -36,7 +36,7 @@
       </div>
       <div class="row">
         <div class="col col-sm-1">
-          <%= f.submit "Létrehoz" %>
+          <%= f.submit t(".create") %>
         </div>
       </div>
     </form>

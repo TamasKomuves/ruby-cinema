@@ -30,4 +30,128 @@
 # available at http://guides.rubyonrails.org/i18n.html.
 
 en:
-  hello: "Hello world"
+  email: "Email"
+  password: "Password"
+  title: "Cinema"
+  home_nav: "Home"
+  screenings_nav: "Screenings"
+  my_tickets_nav: "My tickets"
+  sign_out_nav: "Logout"
+  movies_nav: "Movies"
+  auditoria_nav: "Auditoria"
+  categories_nav: "Categories"
+  welcome:
+    show:
+      welcome: "Welcome"
+  screenings:
+    index:
+      title: "Screenings"
+      movie_title: "Movie title"
+      ticket_price: "Ticket price"
+      length: "Length"
+      date: "Screening date"
+      category: "Category"
+      description: "Description"
+      auditorium: "Auditorium"
+      booking: "Booking"
+    admin_index:
+      new_screening: "Create new screening"
+      title: "Screenings"
+      movie_title: "Movie title"
+      ticket_price: "Ticket price"
+      length: "Length"
+      date: "Screening date"
+      category: "Category"
+      description: "Description"
+      auditorium: "Auditorium"
+      modify: "Modify"
+      delete: "Delete"
+      are_you_sure_to_delete: "Are you sure to delete?"
+    edit:
+      title: "Modify screenings"
+      date: "Date"
+      movie: "Movie"
+      auditorium: "Auditorium"
+      ticket_cost: "Ticket cost"
+      modify: "Modify"
+    new:
+      title: "Create new screening"
+      date: "Date"
+      movie: "Movie"
+      auditorium: "Auditorium"
+      ticket_cost: "Ticket cost"
+      create: "Create"
+  movies:
+    admin_index:
+      title: "Movies"
+      create_new_movie: "Create new movie"
+      movie_title: "Title"
+      length: "Length"
+      category: "Category"
+      description: "Description"
+      modify: "Modify"
+      delete: "Delete"
+      are_you_sure_to_delete: "Are you sure to delete?"
+    edit:
+      title: "Modify movie"
+      movie_title: "Title"
+      length: "Length"
+      category: "Category"
+      description: "Description"
+      modify: "Modify"
+    new:
+      title: "Create new movie"
+      movie_title: "Title"
+      length: "Length"
+      category: "Category"
+      description: "Description"
+      create: "Create"
+  auditoria:
+    admin_index:
+      title: "Auditorium"
+      create_new_auditorium: "Create new auditorium"
+      name: "Name"
+      capacity: "Capacity"
+      modify: "Modify"
+      delete: "Delete"
+      are_you_sure_to_delete: "Are you sure to delete?"
+    edit:
+      title: "Modify auditorium"
+      name: "Name"
+      capacity: "Capacity"
+      modify: "Modify"
+    new:
+      title: "Create new auditorium"
+      name: "Name"
+      capacity: "Capacity"
+      create: "Create"
+  categories:
+    admin_index:
+      title: "Categories"
+      create_new_category: "Create new category"
+      name: "Name"
+      modify: "Modify"
+      delete: "Delete"
+      are_you_sure_to_delete: "Are you sure to delete?"
+    edit:
+      title: "Modify category"
+      name: "Name"
+      modify: "Modify"
+    new:
+      title: "Create new category"
+      name: "Name"
+      create: "Create"
+  tickets:
+    index:
+      title: "My tickets"
+      movie_title: "Movie title"
+      auditorium: "Auditorium"
+      ticket_quantity: "Ticket quantity"
+      price_sum: "Price sum"
+      screening_date: "Screening date"
+    new:
+      title: "Ticket booking"
+      movie_title: "Movie title"
+      quantity: "Quantity"
+      create: "Create"
+

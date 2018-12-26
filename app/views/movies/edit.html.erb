@@ -1,10 +1,10 @@
-<h3>Film szerkesztése</h3>
+<h3><%= t(".title") %></h3>
 <div>
   <%= form_for @movie do |f| %>
     <form>
       <div class="row">
         <div class="col col-sm-1">
-          <strong>Cím:</strong>
+          <strong><%= t(".movie_title") %>:</strong>
         </div>
         <div class="col">
           <%= f.text_field :title, :required => 'required' %>
@@ -12,7 +12,7 @@
       </div>
       <div class="row">
         <div class="col col-sm-1">
-          <strong>Hossz:</strong>
+          <strong><%= t(".length") %>:</strong>
         </div>
         <div class="col">
           <%= f.number_field :length, :required => 'required' %>
@@ -20,7 +20,7 @@
       </div>
       <div class="row">
         <div class="col col-sm-1">
-          <strong>Kategória:</strong>
+          <strong><%= t(".category") %>:</strong>
         </div>
         <div class="col">
           <%= f.collection_check_boxes :category_ids, Category.all, :id, :name %>
@@ -28,7 +28,7 @@
       </div>
       <div class="row">
         <div class="col col-sm-1">
-          <strong>Leírás:</strong>
+          <strong><%= t(".description") %>:</strong>
         </div>
         <div class="col">
           <%= f.text_area :description, :required => 'required' %>
@@ -36,7 +36,7 @@
       </div>
       <div class="row">
         <div class="col col-sm-1">
-          <%= f.submit "Módosít" %>
+          <%= f.submit t(".modify") %>
         </div>
       </div>
     </form>

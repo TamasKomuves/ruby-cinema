@@ -2,10 +2,10 @@
 
   <form>
     <div class="form-group row">
-      <label class="col-sm-2 col-form-label"><%= form.text_field :email, type: 'email' , placeholder: "Email" %></label>
+      <label class="col-sm-2 col-form-label"><%= form.text_field :email, type: 'email' , placeholder: t("email") %></label>
     </div>
     <div class="form-group row">
-      <label class="col-sm-2 col-form-label"><%= form.password_field :password, placeholder: "Jelszó" %></label>
+      <label class="col-sm-2 col-form-label"><%= form.password_field :password, placeholder: t("password") %></label>
     </div>
     <div class="submit-field">
       <%= form.submit %>

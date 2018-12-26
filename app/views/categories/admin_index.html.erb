@@ -1,0 +1,19 @@
+<div class="title">
+  <h1><%= t(".title") %></h1>
+</div>
+
+<%= button_to t(".create_new_category"), new_category_path, :method => :get, :form_class => "btn btn-light btn-sm" %>
+
+<% @categories.each do |category| %>
+  <div class="screening-container border rounded border-dark">
+    <div class="row">
+      <div class="col-md">
+        <strong><%= t(".name") %>:</strong> <%= category.name %>
+      </div>
+    </div>
+    <div class="col-md">
+      <%= button_to t(".modify"), edit_category_path(category), :method => :get, :form_class => "btn btn-light btn-sm admin-screenings-button" %>
+      <%= button_to t(".delete"), category_path(category), :method => :delete, data: {confirm: t(".are_you_sure_to_delete")}, :form_class => "btn btn-light btn-sm admin-screenings-button" %>
+    </div>
+  </div>
+<% end %>

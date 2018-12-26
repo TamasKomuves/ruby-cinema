@@ -1,0 +1,54 @@
+---
+hu:
+  clearance:
+    models:
+      clearance_mailer:
+        change_password: "Változtassa meg jelszavát"
+  clearance_mailer:
+    change_password:
+      closing: "Ha nem kérelmezte, akkor hagyja figyelmen kívül ezt az emailt. A jelszava nem lett megváltoztatva."
+      link_text: "Jelszó megváltoztatása"
+      opening: "Valaki, remélhetőleg Ön, kérelmezte a jelszava megváltoztatását."
+  flashes:
+    failure_after_create: "Helytelen email vagy jelszó."
+    failure_after_update: "A jelszó nem lehet üres."
+    failure_when_forbidden: "Kérjük ellenőrizze az URL-t vagy próbálja újra."
+    failure_when_not_signed_in: "Folytatás előtt kérem jelentkezzen be"
+  helpers:
+    label:
+      password:
+        email: "Email cím"
+      password_reset:
+        password: "Válasszon jelszavat"
+    submit:
+      password:
+        submit: "Jelszó visszaállítása"
+      password_reset:
+        submit: "Jelszó mentése"
+      session:
+        submit: "Bejelentkezés"
+      user:
+        create: "Regisztráció"
+  layouts:
+    application:
+      sign_in: "Bejelentkezés"
+      sign_out: "Regisztráció"
+  passwords:
+    create:
+      description: "Hamarosan emailt kap"
+    edit:
+      description: "Jelszó megváltoztatva"
+      title: "Változtassa meg jelszavát"
+    new:
+      description: "Kérem adja meg email címét jelszava megváltoztatásához.
+      title: Reset your password"
+  sessions:
+    form:
+      forgot_password: "Elfelejtette jelszavát?"
+      sign_up: "Regisztráció"
+    new:
+      title: "Bejelentkezés"
+  users:
+    new:
+      sign_in: "Bejelentkezés"
+      title: "Regisztráció"

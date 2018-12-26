@@ -1,0 +1,28 @@
+<h3><%= t(".title") %></h3>
+<div>
+  <%= form_for @auditorium do |f| %>
+    <form>
+      <div class="row">
+        <div class="col col-sm-1">
+          <strong><%= t(".name") %>:</strong>
+        </div>
+        <div class="col">
+          <%= f.text_field :name, :required => 'required' %>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col col-sm-1">
+          <strong><%= t(".capacity") %>:</strong>
+        </div>
+        <div class="col">
+          <%= f.number_field :capacity, :required => 'required' %>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col col-sm-1">
+          <%= f.submit t(".create") %>
+        </div>
+      </div>
+    </form>
+  <% end %>
+</div>

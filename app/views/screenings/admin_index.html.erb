@@ -1,45 +1,48 @@
 <div class="title">
-  <h1>Vetítések</h1>
+  <h1><%= t(".title") %></h1>
 </div>
 
-<%= button_to "Új vetítés létrehozása", new_screening_path, :method => :get, :form_class => "btn btn-light btn-sm" %>
+<%= button_to t(".new_screening"), new_screening_path, :method => :get, :form_class => "btn btn-light btn-sm" %>
 
 <% @screenings.each do |screening| %>
   <div class="screening-container border rounded border-dark">
     <div class="row">
       <div class="col-md">
-        <strong>Film cím:</strong> <%= screening.movie.title %>
+        <strong><%= t(".movie_title") %>:</strong> <%= screening.movie.title %>
       </div>
       <div class="col-md">
-        <strong>Jegyár:</strong> <%= screening.price %> ft
+        <strong><%= t('.ticket_price') %>:</strong> <%= screening.price %> ft
       </div>
       <div class="col-md">
-        <strong>Hossz:</strong> <%= screening.movie.length %> perc
+        <strong><%= t(".length") %>:</strong> <%= screening.movie.length %> perc
       </div>
     </div>
     <div class="row">
       <div class="col-md">
-        <strong>Vetítés dátuma:</strong> <%= screening.date %>
+        <strong><%= t(".date") %>:</strong> <%= screening.date %>
       </div>
       <div class="col-md">
-        <strong>Kategória:</strong>
+        <strong><%= t(".category") %>:</strong>
         <% screening.movie.categories.each do |category| %>
           <%= category.name %>
         <% end %>
       </div>
       <div class="col-md">
-        <strong>Leírás:</strong> <%= screening.movie.description %> <br>
+        <strong><%= t(".description") %>:</strong> <%= screening.movie.description %> <br>
       </div>
     </div>
     <div class="row">
       <div class="col-md">
-        <strong>Terem:</strong> <%= screening.auditorium.name %>
+        <strong><%= t(".auditorium") %>:</strong>
+        <% if screening.auditorium != nil %>
+          <%= screening.auditorium.name %>
+        <% end %>
       </div>
     </div>
     <div class="row">
       <div class="col-md">
-        <%= button_to "Módosítás", edit_screening_path(screening), :method => :get, :form_class => "btn btn-light btn-sm admin-screenings-button" %>
-        <%= button_to "Törlés", screening_path(screening), :method => :delete, data: {confirm: "Biztosan törli?"}, :form_class => "btn btn-light btn-sm admin-screenings-button" %>
+        <%= button_to t(".modify"), edit_screening_path(screening), :method => :get, :form_class => "btn btn-light btn-sm admin-screenings-button" %>
+        <%= button_to t(".delete"), screening_path(screening), :method => :delete, data: {confirm: t(".are_you_sure_to_delete")}, :form_class => "btn btn-light btn-sm admin-screenings-button" %>
       </div>
     </div>
   </div>
